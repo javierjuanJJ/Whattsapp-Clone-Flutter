@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -49,21 +46,31 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyDD5WN0uMIa-2cFD_HANgmV3A9QIyvK8fg',
+    appId: '1:767229289165:web:e92c2e8994ec1051d9ff84',
+    messagingSenderId: '767229289165',
+    projectId: 'whatsapp-clone-flutter-cda1d',
+    authDomain: 'whatsapp-clone-flutter-cda1d.firebaseapp.com',
+    storageBucket: 'whatsapp-clone-flutter-cda1d.appspot.com',
+    measurementId: 'G-XVQ36B6V5M',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB37aSzQwR_RJatCxy9F7V5hcxSvy1pWqc',
-    appId: '1:867907366273:android:03f3e5c37621ae01cf0c80',
-    messagingSenderId: '867907366273',
-    projectId: 'whatsapp-backend-c4d7f',
-    storageBucket: 'whatsapp-backend-c4d7f.appspot.com',
+    apiKey: 'AIzaSyCTWDCqiDQzoQokqXLacx-9gcZaDDG9Nnk',
+    appId: '1:767229289165:android:2d2c7486236ec2efd9ff84',
+    messagingSenderId: '767229289165',
+    projectId: 'whatsapp-clone-flutter-cda1d',
+    storageBucket: 'whatsapp-clone-flutter-cda1d.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBSDWRP0gJNvfu50pTKYfUqRDDEkQsQrUI',
-    appId: '1:867907366273:ios:6f8cdf10bb49ba7ecf0c80',
-    messagingSenderId: '867907366273',
-    projectId: 'whatsapp-backend-c4d7f',
-    storageBucket: 'whatsapp-backend-c4d7f.appspot.com',
-    iosClientId: '867907366273-j9hk7oisbdk70t3q3ri6n5qveuj30ohh.apps.googleusercontent.com',
+    apiKey: 'AIzaSyD-LmKI0S4aoiocDvNIlV6rmwuj5I8uNXI',
+    appId: '1:767229289165:ios:436663bf609f2868d9ff84',
+    messagingSenderId: '767229289165',
+    projectId: 'whatsapp-clone-flutter-cda1d',
+    storageBucket: 'whatsapp-clone-flutter-cda1d.appspot.com',
+    iosClientId: '767229289165-vq53neevm2p92d8v2l9nnn09turekdi5.apps.googleusercontent.com',
     iosBundleId: 'com.example.whatsappUi',
   );
 }
